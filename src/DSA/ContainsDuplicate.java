@@ -18,10 +18,12 @@ public class ContainsDuplicate {
     }
 
     public boolean containsDuplicate(int[] nums) {
+        // HashSet so that only unique elements are inserted
         HashSet<Integer> setOfArray = new HashSet<>();
         for (int num: nums) {
             setOfArray.add(num);
         }
+        // return true only there is a mismatch in length(contains duplcates)
         return setOfArray.size() != nums.length;
 
     }
